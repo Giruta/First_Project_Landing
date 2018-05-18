@@ -1,3 +1,44 @@
+@font-face {
+	font-family: 'Dosis Light';
+	src: url('../fonts/Dosis-Light.woff2') format('woff2'),
+	url('../fonts/Dosis-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Dosis Regular';
+	src: url('../fonts/Dosis-Regular.woff2') format('woff2'),
+	url('../fonts/Dosis-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Open Sans Regular';
+	src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+	url('../fonts/OpenSans-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open Sans SemiBold';
+	src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+	url('../fonts/OpenSans-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Open Sans Light';
+	src: url('../fonts/OpenSans-Light.woff2') format('woff2'),
+	url('../fonts/OpenSans-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+/* ===== Reset start ===== */
+
 *{
 	box-sizing: border-box;
 	margin: 0;
@@ -9,7 +50,7 @@ html {
 body{
 	margin: 0;
 	color: #777;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Open Sans Light', sans-serif;
 }
 a{
 	color: inherit;
@@ -24,12 +65,21 @@ ul{
 img {
 	max-width: 100%;
 }
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active
+{
+	outline: none;
+}
+
 button {
 	outline: none;
 	border: none;
 	cursor: pointer;
 }
-/* Grid layout start */
+/* ===== Reset end ===== */
+/*///////////////////////////*/
+/* =====Grid layout start===== */
 .container {
 	max-width: 1200px;
 	padding: 0 15px;
@@ -89,6 +139,7 @@ button {
 	width: 100%
 }
 /* Grid layout end */
+/*////////////////////////*/
 /* Default classes start */
 .text-center {
 	text-align: center;
@@ -99,24 +150,52 @@ button {
 .bg-black {
 	background-color: #111;
 }
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
 /* Default classes end */
+/*////////////////////////*/
 /* Default component start */
 .default-section {
 	padding: 135px 0;
 }
-.btn {
-	/* общие стили для всех кнопок */
+.btn { /* общие стили для всех кнопок */
+	display: inline-block;
+	line-height: 1.73rem;
+	text-transform: uppercase;
+	font-family: 'Open Sans Regular', sans-serif;
+	border-radius: 2px;
+	letter-spacing: 0.2;
+	/*color: #fff;*/
 }
-.btn-default {
-	/* стили для черной кнопки */
+.btn-default { /* стили для черной кнопки */
+	padding: 13px 20px;
+	background-color: rgba(0, 0, 0, 0.8);
+	font-size: 0.86rem;
+	color: #fff;
 }
-.btn-large {
-	/* для кнопок серых и больших */
+.btn-large { /* для кнопок серых и больших */
+	padding: 14px 40px;
+	background-color: rgba(255, 255, 255, 0.8);
+	font-size: 0.93rem;
+	color: #111;
 }
-.btn-small {
- 	/* для мал кнопок*/
+.btn-small { /* для кнопок мал и серых*/
+	padding: 8px 18px;
+	background-color: rgba(0, 0, 0, 0.1);
+	font-size: 0.73rem;
+	color: #777;
 }
-
 .title {
 	font-size: 1.2rem;
 	text-transform: uppercase;
@@ -132,7 +211,57 @@ button {
 	color: #fff;
 }
 /* Default component end */
+/*///////////////////////////*/
 /* Custom style start */
+/*=====Header start============*/
+#header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	background: transparent;
+	/*padding: 20px 0;*/
+	z-index: 1;
+}
+#header.logo {
+	/*font-size: 0;*/
+}
+#header .header-nav {
+	color: rgba (255, 255, 255, 0.75);
+	font-family: "Open Sans Regular", sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+#header .header-nav li {
+	float: left;
+	line-height: 1.73rem;
+	padding: 9px 17px;
+	color: rgba(255,255,255,0.75);
+}
+/*=====Header end============*/
+/*=====Inner start============*/
+.inner {
+	padding-top: 900px;
+	text-align: center;
+	background: #a1a1a1 url(../img/header-bg.jpg) no-repeat center bottom / cover;
+}
+.inner-content {
+	display: inline-block;
+	max-width: 510px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.inner-title {
+	display: inline-block;
+}
+/*=====Inner end============*/
+
+/*/////////////////////////////*/
 /* ===== About studio start ===== */
 .about-studio .row + .row {
 	margin-top: 100px;
@@ -141,6 +270,7 @@ button {
 	display: block;
 }
 /* ===== About studio end ===== */
+/*//////////////////////////////*/
 /* ===== Lets talk start ===== */
 .lets-talk-wrapper {
 	padding-top: 140px;
@@ -154,6 +284,7 @@ button {
 }
 /* ===== Lets talk end ===== */
 /* Custom style end */
+/*////////////////////////////////*/
 
 
 
