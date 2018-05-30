@@ -214,6 +214,9 @@ button {
 }
 .default-text {
 	line-height: 1.73rem;
+	color: #777;
+	font-size: 1rem;
+	font-family: 'Open Sans Light', sans-serif;
 }
 /* Default component end */
 
@@ -322,8 +325,7 @@ button {
 /*//////////////////////////////*/
 /* ===== Lets talk start ===== */
 .lets-talk-wrapper {
-	padding-top: 140px;
-	padding-bottom: 140px;
+	padding: 140px 0;
 }
 .lets-talk-wrapper .title {
 	font-family: "Dosis Light", sans-serif;
@@ -337,8 +339,28 @@ button {
 	margin-bottom: 37px;
 }
 /* ===== Lets talk end ===== */
-/* Custom style end */
-/*////////////////////////////////*/
+/*//////////////////////////////*/
+/* ===== Wy-choose-us start ===== */
+.why-choose-us .row + .row {
+	margin-top: 80px;
+}
+.advantage-icon {
+	color: #111;
+	font-size: 3.2rem;
+	margin-bottom: 32px;
+}
+.advantage-title {
+	font-size: .93rem;
+	letter-spacing: 0.4em;
+	margin-bottom: 30px;
+}
+.advantage .default-text {
+	font-size: .93rem;
+}
+/* ===== Wy-choose-us end ===== */
+/*/////////////////////////////*/
+/* ===Custom style end =====*/
+/*///////////////////////////*/
 
 
 
