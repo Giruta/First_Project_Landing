@@ -35,6 +35,7 @@
 	url('../fonts/OpenSans-Light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
+	font-display: swap;
 }
 
 /* ===== Reset start ===== */
@@ -175,7 +176,7 @@ button {
 	text-transform: uppercase;
 	font-family: 'Open Sans Regular', sans-serif;
 	border-radius: 2px;
-	letter-spacing: 0.2;
+	letter-spacing: .2em;
 	/*color: #fff;*/
 }
 .btn-default { /* стили для черной кнопки */
@@ -203,6 +204,7 @@ button {
 	letter-spacing: .5em;
 	font-weight: normal;
 	margin-bottom: 75px;
+	font-family: 'Dosis Regular', sans-serif;
 }
 .title.title-light {
 	letter-spacing: .3em;
@@ -210,45 +212,57 @@ button {
 .title.title-white {
 	color: #fff;
 }
+.default-text {
+	line-height: 1.73rem;
+}
 /* Default component end */
+
 /*///////////////////////////*/
 /* Custom style start */
+/*///////////////////////////*/
+
 /*=====Header start============*/
 #header {
 	position: fixed;
 	left: 0;
 	right: 0;
 	background: transparent;
-	/*padding: 20px 0;*/
+	padding: 27px 0;
 	z-index: 1;
 }
-#header.logo {
+#header .logo {
 	/*font-size: 0;*/
 }
 #header .header-nav {
-	color: rgba (255, 255, 255, 0.75);
+	color: rgba(255, 255, 255, 0.75);
 	font-family: "Open Sans Regular", sans-serif;
-	font-size: 11px;
+	font-size: 0.733rem;
 	text-transform: uppercase;
 }
 #header .header-nav li {
 	float: left;
-	line-height: 1.73rem;
-	padding: 9px 17px;
+	line-height: 1.6rem;
+	padding: 0px 15px;
 	color: rgba(255,255,255,0.75);
+	letter-spacing: 0.3em;
 }
 /*=====Header end============*/
+/*/////////////////////////////*/
 /*=====Inner start============*/
 .inner {
+	height: 100vh;
+	position: relative;
+	/*padding: 160px 15px 0;*/
 	padding-top: 900px;
 	text-align: center;
 	background: #a1a1a1 url(../img/header-bg.jpg) no-repeat center bottom / cover;
 }
 .inner-content {
 	display: inline-block;
-	max-width: 510px;
+	max-width: 920px;
+	width:100%;
 	position: absolute;
-	top: 50%;
+	top: 44%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
@@ -256,18 +270,53 @@ button {
 	-o-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
-.inner-title {
-	display: inline-block;
+.inner-title h1 {
+	opacity: 0.9;
+	color: #fefefe;
+	font-size: 2rem;
+	letter-spacing: 1.7em;
+	text-indent: 1.7em;
+	margin-bottom: 90px;
+}
+.inner-subtitle {
+	opacity: 0.68;
+	color: #fefefe;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.27rem;
+	font-weight: 300;
 }
 /*=====Inner end============*/
-
 /*/////////////////////////////*/
 /* ===== About studio start ===== */
 .about-studio .row + .row {
 	margin-top: 100px;
 }
+.blockquote {
+	line-height: 2.53rem;
+}
+.blockquote-text {
+	font-size: 1.6rem;
+	margin-bottom: 20px;
+	letter-spacing: 0.2em;
+	font-family: 'Open Sans Light', sans-serif;
+}
+.blockquote-author {
+	font-family: 'Open Sans Regular', sans-serif;
+	font-size: 0.733rem;
+	text-transform: uppercase;
+}
+.team-item-photo {
+	margin-bottom: 26px;
+}
 .team-item-info span{
 	display: block;
+	font-family: 'Dosis Regular', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+}
+.team-item-role {
+	font-size: 0.8rem;
+	margin-top: 12px;
 }
 /* ===== About studio end ===== */
 /*//////////////////////////////*/
@@ -276,11 +325,16 @@ button {
 	padding-top: 140px;
 	padding-bottom: 140px;
 }
+.lets-talk-wrapper .title {
+	font-family: "Dosis Light", sans-serif;
+	margin-bottom: 20px;
+}
 .lets-talk-img {
 	margin-top: -32px;
 }
 .lets-talk .default-text {
 	color: rgba(255, 255, 255, .7);
+	margin-bottom: 37px;
 }
 /* ===== Lets talk end ===== */
 /* Custom style end */
