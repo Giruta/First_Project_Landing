@@ -20,6 +20,7 @@
 	url('../fonts/OpenSans-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'Open Sans SemiBold';
@@ -154,11 +155,9 @@ button {
 .left {
 	float: left;
 }
-
 .right {
 	float: right;
 }
-
 .clear:after {
 	content: "";
 	display: block;
@@ -300,12 +299,12 @@ button {
 .blockquote-text {
 	font-size: 1.6rem;
 	margin-bottom: 20px;
-	letter-spacing: 0.2em;
 	font-family: 'Open Sans Light', sans-serif;
 }
 .blockquote-author {
 	font-family: 'Open Sans Regular', sans-serif;
 	font-size: 0.733rem;
+	letter-spacing: 0.2em;
 	text-transform: uppercase;
 }
 .team-item-photo {
