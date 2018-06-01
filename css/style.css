@@ -45,6 +45,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	outline: none;
 }
 html {
 	font-size: 15px;
@@ -53,6 +54,7 @@ body{
 	margin: 0;
 	color: #777;
 	font-family: 'Open Sans Light', sans-serif;
+	/*font-family: Arial, Helvetica, sans-serif;*/
 }
 a{
 	color: inherit;
@@ -169,6 +171,9 @@ button {
 .default-section {
 	padding: 135px 0;
 }
+.small-section {
+    padding: 70px 0;
+}
 .btn { /* общие стили для всех кнопок */
 	display: inline-block;
 	line-height: 1.73rem;
@@ -185,7 +190,7 @@ button {
 	color: #fff;
 }
 .btn-large { /* для кнопок серых и больших */
-	padding: 14px 40px;
+	padding: 8px 40px;
 	background-color: rgba(255, 255, 255, 0.8);
 	font-size: 0.93rem;
 	color: #111;
@@ -207,6 +212,8 @@ button {
 }
 .title.title-light {
 	letter-spacing: .3em;
+    font-family: "Dosis Light", sans-serif;
+    margin-bottom: 23px;
 }
 .title.title-white {
 	color: #fff;
@@ -244,7 +251,7 @@ button {
 #header .header-nav li {
 	float: left;
 	line-height: 1.6rem;
-	padding: 0px 15px;
+	padding: 0 15px;
 	color: rgba(255,255,255,0.75);
 	letter-spacing: 0.3em;
 }
@@ -322,13 +329,41 @@ button {
 }
 /* ===== About studio end ===== */
 /*//////////////////////////////*/
+/* ===== Services start ===== */
+.services-tab ul {
+	overflow: hidden;
+	margin-bottom: 70px;
+}
+.services-tab ul li{
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+.services-tab ul li.ui-state-active a {
+	color: red;
+}
+.services-tab ul li span {
+	display: block;
+}
+.services-tab ul li a span:last-child {
+	margin-top: 30px;
+	font-size: .93rem;
+	letter-spacing: .4em;
+	text-transform: uppercase;
+	font-family: 'Dosis Regular', sans-serif;
+}
+.services-tab ul li a {
+	color: #111;
+}
+.services-tab ul li a span:first-child {
+	font-size: 3.2rem;
+}
+
+/* ===== Services end ===== */
+/*//////////////////////////////*/
 /* ===== Lets talk start ===== */
 .lets-talk-wrapper {
 	padding: 140px 0;
-}
-.lets-talk-wrapper .title {
-	font-family: "Dosis Light", sans-serif;
-	margin-bottom: 20px;
 }
 .lets-talk-img {
 	margin-top: -32px;
@@ -338,6 +373,63 @@ button {
 	margin-bottom: 37px;
 }
 /* ===== Lets talk end ===== */
+/*//////////////////////////////*/
+/* ===== Portfolio start ===== */
+.portfolio {
+	padding-bottom: 0;
+}
+.portfolio-text {
+	max-width: 760px;
+	margin: 0 auto 80px;
+}
+/*.portfolio .row + .row {*/
+	/*margin-top: 7px;*/
+/*}*/
+.portfolio-item {
+	width: 33%;
+	display: inline-block;
+	margin-bottom: 7px;
+}
+.portfolio-item + .portfolio-item {
+	margin-left: 0.5%;
+}
+.portfolio-item:nth-child(3n+1) {
+	margin-left: 0;
+}
+.portfolio-item img {
+	filter: grayscale(100%);
+	width:100%;
+}
+.portfolio-item img:hover {
+	filter: grayscale(0);
+}
+.portfolio-tab > div {
+	font-size: 0;
+}
+.portfolio-tab ul {
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+.portfolio-tab ul li{
+	display: inline-block;
+	text-align: center;
+}
+.portfolio-tab ul li.ui-state-active a {
+	color: red;
+}
+.portfolio-tab ul li a {
+	display: block;
+	color: #111;
+	font-size: .93rem;
+	letter-spacing: .4em;
+	padding-right: 65px;
+	text-transform: uppercase;
+	font-family: 'Dosis Regular', sans-serif;
+}
+.portfolio-tab ul li:last-child a {
+	padding-right: 0;
+}
+/* ===== Portfolio end ===== */
 /*//////////////////////////////*/
 /* ===== Wy-choose-us start ===== */
 .why-choose-us .row + .row {
@@ -357,6 +449,51 @@ button {
 	font-size: .93rem;
 }
 /* ===== Wy-choose-us end ===== */
+/*/////////////////////////////*/
+/* ===== Reviews start ===== */
+.reviews-carousel {
+	padding: 140px 0;
+}
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+.slick-arrow.slick-prev {
+	left: 0;
+}
+.slick-arrow.slick-next {
+	right: 0;
+}
+.slick-dots {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	line-height: 0;
+}
+.slick-dots li {
+	display: inline-block;
+	vertical-align: bottom;
+}
+.slick-dots li + li {
+	margin-left: 5px;
+}
+.slick-dots li button {
+	color: transparent;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	background-color: #ccc;
+}
+.slick-dots li.slick-active button {
+	background-color: transparent;
+	width: 9px;
+	height: 9px;
+}
+/* ===== Reviews end ===== */
 /*/////////////////////////////*/
 /* ===Custom style end =====*/
 /*///////////////////////////*/
